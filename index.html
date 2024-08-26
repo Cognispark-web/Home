@@ -131,4 +131,17 @@
     </footer>
 </body>
 <script src="script.js"></script>
+    <script>
+        let url = 'https://script.google.com/macros/s/AKfycbxXZTZHPq098YAgR4jDGP-7_8hyi_wvLbCC4IBVAzfOl9YyOmZ06R_0BVK9QR57MCnU/exec';
+        let form = document.querySelector('#form);
+        form.addEventListener("submit", (e) =>{
+            let d=new FormData(form); 
+            fetch(url, {
+                method:"POST";
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes)=>alert(finalRes));
+        e.preventDefault();
+        }
+    </script>
 </html>
